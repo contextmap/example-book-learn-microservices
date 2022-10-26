@@ -43,3 +43,9 @@ spring:
 #logging:
 #  level:
 #    org.springframework.cloud.gateway.handler.predicate: trace
+
+contextmap:
+  enabled: true
+  key: '@contextmap.key@'
+  scan:
+    system-name: Game

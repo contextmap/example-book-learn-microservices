@@ -9,6 +9,12 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <developers>
+        <developer>
+            <name>Monopoly</name>
+        </developer>
+    </developers>
+
     <properties>
         <java.version>14</java.version>
         <cucumber.version>6.6.0</cucumber.version>
@@ -16,6 +22,9 @@
         <assertj.version>3.17.2</assertj.version>
         <jackson.version>2.11.2</jackson.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <contextmap.key>${env.CONTEXTMAP_KEY}</contextmap.key>
+        <contextmap.version>1.14.0</contextmap.version>
     </properties>
 
     <dependencies>
@@ -80,6 +89,14 @@
                     <encoding>UTF-8</encoding>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.contextmap</groupId>
+                <artifactId>java-spring-compiletime</artifactId>
+                <version>${contextmap.version}</version>
+                <configuration>
+                    <key>${contextmap.key}</key>
                 </configuration>
             </plugin>
         </plugins>
