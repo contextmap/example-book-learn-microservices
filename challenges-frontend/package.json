@@ -14,7 +14,7 @@
     "@contextmap/typescript-compiletime": "^1.0.0"
   },
   "author": {
-    "name": "Monopoly"
+    "name": "Scrabble"
   },
   "scripts": {
     "start": "react-scripts start",
